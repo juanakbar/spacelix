@@ -29,7 +29,7 @@ export default function Home(props) {
                                         </span>
                                     <span
                                         className='pl-6 text-indigo-400 group-hover:text-gray-100 transition duration-200'>
-                                            <span className={'hidden md:inline'}>See what's new</span> &rarr;
+                                            <span>See what's new</span> &rarr;
                                     </span>
                                 </a>
                             </div>
