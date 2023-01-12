@@ -13,7 +13,7 @@ const router = createBrowserRouter([
         element: <Home />,
     },
     {
-        path: "/tutorial/linux/networking",
+        path: "/tutorial/linux/networking-ajau",
         element: <Networking />,
     },
     {

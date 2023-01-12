@@ -4,7 +4,7 @@ import App from '../../../../App.jsx';
 export default function Networking(props) {
     return (
         <App>
-            Juan
+            Hallo
         </App>
     );
 }
