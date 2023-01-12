@@ -6,7 +6,7 @@ const linux = [
         name: 'Setting Network',
         href: '/tutorial/linux/networking-ajau',
         excerpt: 'Disini kita akan belajar gimana install package untuk setting jaringan dan konfigurasi jaringan pada linux debian 9.',
-        img: '1.png',
+        img: '/Article/1.png',
     },
 ];
 export default function Linux(props) {
@@ -27,7 +27,7 @@ export default function Linux(props) {
                             <div
                                 className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
                                 <a href={item.href}>
-                                    <img className="rounded-t-lg" src={`./src/assets/Article/${item.img}`} alt={item.name} />
+                                    <img className="rounded-t-lg" src={item.img} alt={item.name} />
                                 </a>
                                 <div className="p-5">
                                     <a href={item.href}>
