@@ -1,7 +1,7 @@
 import React from 'react';
 import App from '../../App.jsx';
 import { NewspaperIcon } from '@heroicons/react/20/solid/index.js';
-
+import moment from 'moment';
 const project = [
     {
         name: 'System Administration',
@@ -10,11 +10,12 @@ const project = [
         tag: 'Linux',
         author: 'Juan Akbar Indrian',
         img: 'https://juanakbar.vercel.app/static/media/profile.4e4a1bf0eb2d9b9ffaa3.jpg',
+        created_at: '2023-01-12',
     },
     {
         name: 'Web Development',
         href: '/tutorial/webdev',
-        excerpt: 'Web development refers to the process of creating and maintaining websites. It encompasses a wide range of tasks and technologies, including the design and layout of the website, the creation of the website\'s content, and the management of the website\'s functionality and performance. There are many different programming languages and tools used in web development, including HTML, CSS, JavaScript, and various web frameworks and content management systems. Web developers may work on the front-end (client side) or the back-end (server side) of a website.',
+        excerpt: 'Web development refers to the process of creating and maintaining websites. It encompasses a wide range of tasks and technologies, including the design and layout of the website, the creation of the website\'s content, and the management of the website\'s functionality and performance. There are many different programming languages and tools used in web development, including HTML, CSS, JavaScript, and various web frameworks and content management systems.',
         tag: 'Web Dev',
         author: 'Juan Akbar Indrian',
         img: 'https://juanakbar.vercel.app/static/media/profile.4e4a1bf0eb2d9b9ffaa3.jpg',
@@ -43,7 +44,7 @@ export default function Tutorial(props) {
                                       <NewspaperIcon className={'mr-1 w-3 h-3'} />
                                       {item.tag}
                                   </span>
-                                    <span className='text-sm'>14 days ago</span>
+                                    <span className='text-sm'>{moment(item.created_at).fromNow()}</span>
                                 </div>
                                 <h2 className='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'><a
                                     href='#'>{item.name}</a></h2>
@@ -54,7 +55,7 @@ export default function Tutorial(props) {
                                              src={item.img}
                                              alt={item.author} />
                                         <span className='font-medium dark:text-white'>
-                          Jese Leos
+                          {item.author}
                       </span>
                                     </div>
                                     <a href={item.href}

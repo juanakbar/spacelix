@@ -12,10 +12,13 @@
   "dependencies": {
     "@headlessui/react": "^1.7.7",
     "@heroicons/react": "^2.0.13",
+    "@tailwindcss/typography": "^0.5.9",
     "highlight.js": "^11.7.0",
     "marked": "^4.2.5",
+    "moment": "^2.29.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-markdown": "^8.0.4",
     "react-router-dom": "^6.6.2"
   },
   "devDependencies": {
