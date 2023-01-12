@@ -3,6 +3,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { useState } from 'react';
 import Logo from'/public/img/SpacelixLogo.png'
 import LogoDark from'/public/img/LogoDark.png'
+import { Link } from 'react-router-dom';
 
 const navigation = [
     { name: 'Home', href: '/' },
@@ -28,12 +29,12 @@ export default function Navbar() {
             <div className="container ">
                 <nav className="flex h-9 items-center justify-between" aria-label="Global">
                     <div className="flex lg:min-w-0 lg:flex-1" aria-label="Global">
-                        <a href="/" className="-m-1.5 p-1.5">
+                        <Link to="/" className="-m-1.5 p-1.5">
                             <span className="sr-only">Your Company</span>
                             {
                                 theme === 'light' ? <img className="md:h-16 h-8" src={Logo} alt="" /> : <img className="md:h-16 h-8" src={LogoDark} alt="" />
                             }
-                        </a>
+                        </Link>
                     </div>
                     <div className="flex lg:hidden">
                         <button type="button" onClick={darkModeSwitch}
@@ -65,9 +66,9 @@ export default function Navbar() {
                     </div>
                     <div className="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-center lg:gap-x-12">
                         {navigation.map((item) => (
-                            <a key={item.name} href={item.href} className="font-semibold text-gray-900 hover:text-pink-500 dark:text-white">
+                            <Link key={item.name} to={item.href} className="font-semibold text-gray-900 hover:text-pink-500 dark:text-white">
                                 {item.name}
-                            </a>
+                            </Link>
                         ))}
                     </div>
                     <div className="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-end">
@@ -125,13 +126,13 @@ export default function Navbar() {
                             <div className="-my-6 divide-y divide-gray-500/10">
                                 <div className="space-y-2 py-6">
                                     {navigation.map((item) => (
-                                        <a
+                                        <Link
                                             key={item.name}
-                                            href={item.href}
+                                            to={item.href}
                                             className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10 dark:text-white dark:hover:bg-gray-700/10"
                                         >
                                             {item.name}
-                                        </a>
+                                        </Link>
                                     ))}
                                 </div>
 
