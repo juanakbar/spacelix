@@ -60,7 +60,7 @@ export default function Networking(props) {
                         </div>
                     </div>
 
-                    <div className='w-full lg:w-1/4 m-auto mt-12 max-w-screen-sm'>
+                    <div className='w-full lg:w-1/4  m-auto mt-12 max-w-screen-sm'>
                         <div className='p-4 border-t border-b md:border md:rounded'>
                             <div className='flex py-2'>
                                 <img src={linux.author.img}
@@ -77,10 +77,10 @@ export default function Networking(props) {
                             </p>
                             <Link to={'https://instagram.com/juanakbarr1'}
                                 className='relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800'>
-  <span
-      className='relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0'>
-      Follow on Instagram
-  </span>
+                              <span
+                                  className='relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0'>
+                                  Follow on Instagram
+                              </span>
                             </Link>
                         </div>
                     </div>
