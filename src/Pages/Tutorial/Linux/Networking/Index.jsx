@@ -58,6 +58,8 @@ export default function Networking(props) {
                         <Markdown>
                             {md}
                         </Markdown>
+                        <kbd>CTRL+I</kbd>
+
                     </div>
 
 
