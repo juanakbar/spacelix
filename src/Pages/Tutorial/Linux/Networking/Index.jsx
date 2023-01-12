@@ -1,9 +1,7 @@
 import React, { useEffect } from 'react';
 import App from '../../../../App.jsx';
-import { Link } from 'react-router-dom';
 import Markdown from '../../../../Components/Markdown.jsx';
-import { marked } from 'marked';
-import ReactMarkdown from 'react-markdown';
+import { Link } from 'react-router-dom';
 
 const linux =
     {
@@ -19,7 +17,6 @@ const linux =
     };
 
 
-
 export default function Networking(props) {
     const [md, setMd] = React.useState('');
     useEffect(() => {
@@ -29,7 +26,7 @@ export default function Networking(props) {
             .then((text) => {
                 setMd(text);
             });
-    }, [])
+    }, []);
 
     return (
         <App>
@@ -50,18 +47,18 @@ export default function Networking(props) {
                     <img
                         alt={linux.name}
                         src={linux.img}
-                        className='w-full object-cover lg:rounded h-[28em]' />
+                        className='h-auto max-w-full rounded-lg' />
                 </div>
 
                 <div className='flex flex-col lg:flex-row lg:space-x-12'>
-                    <div className='bg-white dark:bg-gray-800 rounded-lg shadow-2xl p-6 mt-6'>
-                        <Markdown>
-                            {md}
-                        </Markdown>
-                        <kbd>CTRL+I</kbd>
+                    <div className='px-3 sm:-px-3'>
+                        <div className='bg-white dark:bg-gray-800 rounded-lg shadow-2xl p-8 mt-6'>
+                            <Markdown>
+                                {md}
+                            </Markdown>
 
+                        </div>
                     </div>
-
 
                     <div className='w-full lg:w-1/4 m-auto mt-12 max-w-screen-sm'>
                         <div className='p-4 border-t border-b md:border md:rounded'>
@@ -79,12 +76,15 @@ export default function Networking(props) {
                                 whatever it.
                             </p>
                             <Link to={'https://instagram.com/juanakbarr1'}
-                                  className='px-2 py-1 text-gray-100 bg-green-700 flex w-full items-center justify-center rounded'>
-                                Follow on Instagram
-                                <i className='bx bx-user-plus ml-2'></i>
+                                className='relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800'>
+  <span
+      className='relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0'>
+      Follow on Instagram
+  </span>
                             </Link>
                         </div>
                     </div>
+
 
                 </div>
             </main>
